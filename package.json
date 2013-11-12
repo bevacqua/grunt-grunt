@@ -1,0 +1,35 @@
+{
+  "name": "grunt-grunt",
+  "description": "Grunt task to run tasks on other Gruntfiles",
+  "homepage": "https://github.com/bevacqua/grunt-grunt",
+  "author": {
+    "name": "Nicolas Bevacqua",
+    "email": "ng@bevacqua.io",
+    "url": "http://bevacqua.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bevacqua/grunt-grunt.git"
+  },
+  "version": "0.1.0",
+  "licenses": "MIT",
+  "keywords": [
+    "gruntplugin",
+    "grunt",
+    "gruntfile"
+  ],
+  "engines": {
+    "node": "0.10.18",
+    "npm": "1.2.x"
+  },
+  "dependencies": {
+    "chalk": "0.2.1",
+    "grunt": "0.4.1",
+    "lodash": "2.2.0"
+  },
+  "devDependencies": {
+    "grunt": "0.4.1",
+    "grunt-contrib-jshint": "0.6.4",
+    "jshint-stylish": "0.1.3"
+  }
+}
