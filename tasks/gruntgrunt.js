@@ -1,5 +1,6 @@
 'use strict';
 
+var path = require('path');
 var chalk = require('chalk');
 var spawn = require('child_process').spawn;
 
@@ -16,8 +17,14 @@ module.exports = function (grunt) {
 
         grunt.log.writeln('Spawning %s task(s) in %s', chalk.underline(chalk.blue(data.tasks.join(' '))), chalk.yellow(data.gruntfile));
 
-        var args = data.tasks.concat(['--gruntfile', data.gruntfile]);
-        var child = spawn('grunt', args, { stdio: 'inherit' });
+        // var args = data.tasks.concat(['--gruntfile', data.gruntfile]);
+        var cwd = path.dirname(data.gruntfile);
+
+        var child = spawn('grunt', [], {
+            stdio: 'inherit',
+            cwd: cwd,
+            env: process.env
+        });
 
         child.on('close', function (code) {
             done();
