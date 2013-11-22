@@ -1,6 +1,6 @@
 # Grunt-Grunt Run tasks in other Gruntfiles
 
-Execute Grunt tasks in other Gruntfiles easily from a Grunt task.
+> Execute Grunt tasks in other Gruntfiles easily from a Grunt task.
 
 ## Install
 
