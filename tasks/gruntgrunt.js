@@ -20,7 +20,7 @@ module.exports = function (grunt) {
         // var args = data.tasks.concat(['--gruntfile', data.gruntfile]);
         var cwd = path.dirname(data.gruntfile);
 
-        var child = spawn('grunt', [], {
+        var child = spawn('grunt', data.tasks, {
             stdio: 'inherit',
             cwd: cwd,
             env: process.env
