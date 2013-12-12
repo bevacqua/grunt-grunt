@@ -4,6 +4,8 @@ var path = require('path');
 var chalk = require('chalk');
 var spawn = require('child_process').spawn;
 
+var isWindows = process.platform === 'win32';
+
 module.exports = function (grunt) {
     grunt.registerMultiTask('grunt', 'Spawn Grunt tasks in other Gruntfiles easily from a Grunt task', function () {
         var done = this.async();
@@ -20,7 +22,7 @@ module.exports = function (grunt) {
         // var args = data.tasks.concat(['--gruntfile', data.gruntfile]);
         var cwd = path.dirname(data.gruntfile);
 
-        var child = spawn('grunt', data.tasks, {
+        var child = spawn(isWindows ? 'grunt.cmd' : 'grunt', data.tasks, {
             stdio: 'inherit',
             cwd: cwd,
             env: process.env
