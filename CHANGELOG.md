@@ -1,6 +1,10 @@
+# 0.2.3
+
+- Fail if related Grunt task fails
+
 # 0.2.2
 
-- Fix issue spawning on Windows platform.
+- Fix issue spawning on Windows platform
 
 # 0.2.0
 
