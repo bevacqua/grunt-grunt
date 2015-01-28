@@ -29,7 +29,7 @@ module.exports = function (grunt) {
         });
 
         child.on('close', function (code) {
-            done();
+            done(code === 0);
         });
     });
 };
