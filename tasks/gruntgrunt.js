@@ -11,6 +11,10 @@ module.exports = function (grunt) {
         var done = this.async();
         var data = this.data;
 
+        var options = this.options({
+            grunt: (isWindows ? 'grunt.cmd' : 'grunt')
+        })
+
         if (typeof data.task === 'string') data.tasks = [data.task];
         if (typeof data.tasks === 'string') data.tasks = [data.tasks];
 
@@ -22,7 +26,7 @@ module.exports = function (grunt) {
         // var args = data.tasks.concat(['--gruntfile', data.gruntfile]);
         var cwd = path.dirname(data.gruntfile);
 
-        var child = spawn(isWindows ? 'grunt.cmd' : 'grunt', data.tasks, {
+        var child = spawn(options.grunt, data.tasks, {
             stdio: 'inherit',
             cwd: cwd,
             env: process.env
