@@ -1,3 +1,7 @@
+# 0.2.4
+
+- Allows to set `grunt` path
+
 # 0.2.3
 
 - Fail if related Grunt task fails
