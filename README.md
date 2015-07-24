@@ -31,6 +31,9 @@ Configure as multi-target. If no `tasks` are provided, the default task is execu
 ```js
 grunt.initConfig({
     grunt: {
+        options: {
+            grunt: path.resolve('node_modules/.bin/grunt')
+        },
         lintsome: {
             gruntfile: 'node_modules/some/Gruntfile.js',
             task: 'jshint'
@@ -57,6 +60,15 @@ Run it!
 ```shell
 grunt grunt:lintsome
 ```
+
+## Options
+
+### grunt
+
+Type: `string`  
+Default: `grunt`
+
+Lets you override the default location of the grunt command.
 
 ## License
 
