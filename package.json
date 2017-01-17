@@ -18,10 +18,6 @@
     "grunt",
     "gruntfile"
   ],
-  "engines": {
-    "node": "0.10.18",
-    "npm": "1.2.x"
-  },
   "dependencies": {
     "chalk": "0.2.1",
     "grunt": "~0.4.1",
