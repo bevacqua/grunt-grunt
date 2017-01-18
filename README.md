@@ -55,6 +55,19 @@ grunt.initConfig({
 });
 ```
 
+Also allows multiple task targets with options. **Note:** Options are applied to **all** tasks.
+
+```js
+grunt.initConfig({
+    grunt: {
+        buildsome: {
+            gruntfile: 'node_modules/some/Gruntfile.js',
+            tasks: ['jshint:client', 'build', '--verbose']
+        }
+    }
+});
+```
+
 Run it!
 
 ```shell
